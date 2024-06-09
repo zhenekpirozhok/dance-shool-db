@@ -1,0 +1,6 @@
+RoomID,RoomName,Capacity,Location,Equipment
+1,Studio 1,20,Main Building,"Sound system, Mirrors"
+2,Studio 2,15,Main Building,"Sound system, Ballet barres"
+3,Studio 3,30,Annex Building,"Sound system, Yoga mats"
+4,Dance Hall,50,Main Building,"Sound system, Stage"
+5,Ballroom,40,Annex Building,"Sound system, Dance floor"

@@ -1,0 +1,21 @@
+InstructorID,FirstName,LastName,Email,Phone,Specialization,HireDate,Rating
+1,Алексей,Иванов,alexei.ivanov@example.com,(29) 123-45-67,Ballet,2020-05-15,4.3
+2,Елена,Петрова,elena.petrova@example.com,(29) 765-43-21,Hip Hop,2019-08-20,4.7
+3,Дмитрий,Сидоров,dmitry.sidorov@example.com,(29) 456-78-90,Jazz,2021-03-10,4.5
+4,Екатерина,Ковалева,katerina.kovaleva@example.com,(29) 987-65-43,Contemporary,2020-10-05,4.2
+5,Андрей,Павлов,andrey.pavlov@example.com,(29) 111-22-33,Salsa,2018-11-25,4.8
+6,Ольга,Смирнова,olga.smirnova@example.com,(29) 333-44-55,Ballroom,2019-07-12,4.6
+7,Иван,Морозов,ivan.morozov@example.com,(29) 555-66-77,Ballet,2021-01-30,4.4
+8,Елена,Соловьева,elena.solovyeva@example.com,(29) 777-88-99,Hip Hop,2020-09-03,4.9
+9,Михаил,Лебедев,mikhail.lebedev@example.com,(29) 999-88-77,Jazz,2019-05-18,4.3
+10,Наталья,Николаева,natalya.nikolaeva@example.com,(29) 000-11-22,Contemporary,2021-07-05,4.7
+11,Александр,Егоров,alexander.egorov@example.com,(29) 222-33-44,Salsa,2018-03-20,4.5
+12,Валентина,Степанова,valentina.stepanova@example.com,(29) 444-55-66,Ballroom,2020-11-12,4.2
+13,Алексей,Федоров,alexei.fedorov@example.com,(29) 666-77-88,Ballet,2019-09-25,4.8
+14,Татьяна,Новикова,tatiana.novikova@example.com,(29) 888-99-00,Hip Hop,2021-05-08,4.6
+15,Владимир,Козлов,vladimir.kozlov@example.com,(29) 000-11-22,Jazz,2020-02-10,4.4
+16,Елена,Макарова,elena.makarova@example.com,(29) 333-22-11,Contemporary,2019-06-15,4.9
+17,Андрей,Ильин,andrey.ilin@example.com,(29) 666-55-44,Salsa,2021-02-18,4.3
+18,Ольга,Громова,olga.gromova@example.com,(29) 333-22-11,Ballroom,2020-08-25,4.7
+19,Иван,Борисов,ivan.borisov@example.com,(29) 444-33-22,Ballet,2018-04-30,4.5
+20,Екатерина,Медведева,ekaterina.medvedeva@example.com,(29) 555-66-77,Hip Hop,2019-10-15,4.2

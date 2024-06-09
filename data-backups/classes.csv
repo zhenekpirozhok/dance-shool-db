@@ -1,0 +1,11 @@
+ClassID;ClassName;Description;Level;Duration;Price;Category
+1;Ballet for Beginners;Introduction to classical ballet techniques.;Beginner;60;20.00;Ballet
+2;Hip Hop Dance Workshop;Learn popular hip hop dance moves and routines.;Intermediate;90;25.00;Hip Hop
+3;Jazz Dance Fusion;Blend of jazz dance styles with contemporary elements.;Intermediate;75;22.00;Jazz
+4;Contemporary Dance Exploration;Expressive dance form combining modern and ballet techniques.;Advanced;90;27.00;Contemporary
+5;Salsa Dancing Essentials;Fundamental steps and partner work in salsa dancing.;Beginner;60;20.00;Salsa
+6;Ballroom Dance Basics;Introduction to ballroom dances like waltz, foxtrot, and tango.;Beginner;60;20.00;Ballroom
+7;Latin Dance Party;Energetic class covering various Latin dance styles.;Intermediate;75;23.00;Salsa
+8;Street Dance Crew Training;Training program for aspiring street dance crews.;Advanced;90;28.00;Hip Hop
+9;Modern Jazz Choreography;Learn choreographed routines in contemporary jazz style.;Intermediate;75;24.00;Jazz
+10;Ballet Technique Intensive;Focused training on classical ballet techniques.;Advanced;90;26.00;Ballet

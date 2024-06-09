@@ -1,0 +1,13 @@
+SubscriptionID;SubscriptionName;Price;Duration;NumberOfClasses;Benefits
+1;Basic Membership;50.00;30;10;"- Access to all beginner classes
+- 10% discount on additional classes"
+2;Standard Membership;80.00;60;20;"- Access to all intermediate classes
+- Unlimited access to beginner classes
+- 15% discount on additional classes"
+3;Premium Membership;120.00;90;30;"- Access to all advanced classes
+- Unlimited access to intermediate and beginner classes
+- Free monthly workshop"
+4;Single Class Pass;15.00;1;1;"- Access to one class of any level"
+5;Family Membership;200.00;90;40;"- Access for 2 adults and up to 2 children
+- Unlimited access to all classes
+- Free access to family-oriented workshops"
