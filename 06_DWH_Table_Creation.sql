@@ -1,35 +1,30 @@
 -- Fact Tables
 CREATE TABLE Sales_Fact (
     SalesFactID SERIAL PRIMARY KEY,
-    CustomerKey INT,
-    InstructorKey INT,
-    ClassKey INT,
-    RoomKey INT,
-    SubscriptionKey INT,
-    ClassScheduleKey INT,
-    DateKey INT,
-    TimeKey INT,
-    Price DECIMAL(10, 2),
-    Quantity INT,
-    TotalAmount DECIMAL(10, 2)
+    CustomerID INT,
+    InstructorID INT,
+    ClassID INT,
+    RoomID INT,
+    SubscriptionID INT,
+    ClassScheduleID INT,
+    SaleDate DATE,
+    Price DECIMAL(10, 2)
 );
 
 CREATE TABLE Room_Rental_Fact (
-    RoomRentalFactID SERIAL PRIMARY KEY,
-    RoomRentalKey INT,
-    RoomKey INT,
-    InstructorKey INT,
-    RentalDateKey INT,
-    StartTimeKey INT,
-    EndTimeKey INT,
-    Price DECIMAL(10, 2),
-    Quantity INT,
-    TotalAmount DECIMAL(10, 2)
+    RoomRentalID SERIAL PRIMARY KEY,
+    RoomID INT,
+    InstructorID INT,
+    RentalDate DATE,
+    StartTime TIME,
+    EndTime TIME,
+    Price DECIMAL(10, 2)
 );
 
 -- Dimension Tables
 CREATE TABLE Customer_Dim (
-    CustomerKey INT PRIMARY KEY,
+    CustomerKey SERIAL PRIMARY KEY,            -- Surrogate key
+    CustomerID INT NOT NULL,                   -- Business key (natural key)
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
     Email VARCHAR(100) NOT NULL,
@@ -37,11 +32,15 @@ CREATE TABLE Customer_Dim (
     DateOfBirth DATE,
     Address VARCHAR(255),
     Gender VARCHAR(10),
-    JoinDate DATE
+    JoinDate DATE,
+    EffectiveStartDate DATE NOT NULL,          -- Start date of the record's validity
+    EffectiveEndDate DATE,                     -- End date of the record's validity (NULL for current records)
+    IsCurrent BOOLEAN NOT NULL,                -- Flag to indicate if the record is the current version
+    CONSTRAINT unique_customer_business_key UNIQUE (CustomerID, EffectiveStartDate)  -- Unique constraint on business key and start date
 );
 
 CREATE TABLE Instructor_Dim (
-    InstructorKey INT PRIMARY KEY,
+    InstructorID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
     Email VARCHAR(100) NOT NULL,
@@ -51,8 +50,9 @@ CREATE TABLE Instructor_Dim (
     Rating DECIMAL(2, 1)
 );
 
+
 CREATE TABLE Class_Dim (
-    ClassKey INT PRIMARY KEY,
+    ClassID SERIAL PRIMARY KEY,
     ClassName VARCHAR(100) NOT NULL,
     Description TEXT,
     Level VARCHAR(50),
@@ -61,8 +61,9 @@ CREATE TABLE Class_Dim (
     Category VARCHAR(50)
 );
 
+
 CREATE TABLE Subscription_Dim (
-    SubscriptionKey INT PRIMARY KEY,
+    SubscriptionID SERIAL PRIMARY KEY,
     SubscriptionName VARCHAR(100) NOT NULL,
     Price DECIMAL(10, 2),
     Duration INT,
@@ -70,16 +71,18 @@ CREATE TABLE Subscription_Dim (
     Benefits TEXT
 );
 
+
 CREATE TABLE Room_Dim (
-    RoomKey INT PRIMARY KEY,
+    RoomID SERIAL PRIMARY KEY,
     RoomName VARCHAR(100) NOT NULL,
     Capacity INT NOT NULL,
     Location VARCHAR(255) NOT NULL,
     Equipment TEXT
 );
 
+
 CREATE TABLE ClassSchedule_Dim (
-    ClassScheduleKey INT PRIMARY KEY,
+    ClassScheduleID SERIAL PRIMARY KEY,
     ClassID INT,
     InstructorID INT,
     RoomID INT,
@@ -87,21 +90,4 @@ CREATE TABLE ClassSchedule_Dim (
     StartTime TIME,
     EndTime TIME,
     EnrolledStudents INT
-);
-
-CREATE TABLE Date_Dim (
-    DateKey INT PRIMARY KEY,
-    Date DATE,
-    DayOfWeek INT,
-    Month INT,
-    Quarter INT,
-    Year INT
-);
-
-CREATE TABLE Time_Dim (
-    TimeKey INT PRIMARY KEY,
-    Time TIME,
-    Hour INT,
-    Minute INT,
-    Second INT
 );
